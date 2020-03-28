@@ -27,7 +27,7 @@ const Incidents = () => {
         showsVerticalScrollIndicator={false}
         renderItem={ () => (
           <View key={Math.random()} style={styles.incident}>
-            <Text style={styles.incidenteProperty}>ONG:</Text> 
+            <Text style={[styles.incidenteProperty, {marginTop: 0}]}>ONG:</Text>  
             <Text style={styles.incidentValue}>APAD:</Text>
   
             <Text style={styles.incidenteProperty}>CASO:</Text>
@@ -35,6 +35,7 @@ const Incidents = () => {
   
             <Text style={styles.incidenteProperty}>VALOR:</Text>
             <Text style={styles.incidentValue}>R$ 120,00</Text>
+
             <TouchableOpacity style={styles.detailsButton} onPress={navigateToDetail}>
               <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
               <Feather name="arrow-right" size={16} color="#E02041" />
